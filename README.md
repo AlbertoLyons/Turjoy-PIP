@@ -1,4 +1,7 @@
 # TURJOY
+
+php artisan migrate:fresh --seed
+
 Es un sistema que permite la búsqueda de reservas y la reserva de pasajes en línea de la empresa "Turjoy". Permite al usuario visualizar las rutas de los viajes y reservar pasajes de acuerdo a su fecha y hora, indicando el origen, destino y cantidad de pasajes.
 
 El objetivo de este documento es guiar al usuario en el uso correcto de los requisitos previos e instalación. Además, se busca comprender el funcionamiento del sistema. Para esto, el documento se divide en ciertos puntos
