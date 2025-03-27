@@ -19,5 +19,7 @@ class usuarioTableSeeder extends Seeder
             'password'=> bcrypt('Turjoy91'),
             'userType' => 2,
         ]);
+        User::factory(50)->create();
+
     }
 }
