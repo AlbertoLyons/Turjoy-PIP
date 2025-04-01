@@ -64,6 +64,85 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
    - `composer -v`
    
 ## 3. Procedimientos de mantención preventiva
+## Procedimiento para recuperar versionado de Laravel.
+Para la recuperación de los versionados de Laravel del proyecto se debe de realizar de la siguiente forma:
+
+- Se necesitara comprobar la versión de laravel que se tenga instalada, si se tiene de forma global Laravel es con el siguiente comando
+
+```bash
+laravel --version
+```
+Si Laravel no esta de forma global.
+ ```bash
+php artisan --version
+```
+- Se debe de instalar la versión de Laravel correspondiente en la carpeta del proyecto
+ ```bash
+composer create-project laravel/laravel nombre-del-proyecto "versión a gusto"
+```
+
+- Se debe de configurar el json composer del proyecto para ajustarlo a la versión solicitada.
+ ```json
+"laravel/framework": "^Versión"
+```
+- Se debe de ejecutar el siguiente comando para modificar el json
+
+ ```bash
+composer update
+
+```
+- Se debe verificar los cambios con los siguientes comandos
+```bash
+php artisan cache:clear
+php artisan config:clear
+php artisan route:clear
+php artisan view:clear
+php artisan migrate
+```
+
+
+
+## Procedimiento para recuperar versionado de node.
+
+Para la recuperación de los versionados de los proyectos en node se realizara de la siguiente forma:
+
+- Se necesitara la instalación de NVM, si usted ya lo tiene instalada, salte este paso. La instalación sera realizada por la consola de comando, en este caso, por **PowerShell**.
+```bash
+curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+
+```
+Es necesario verificar la instalación de **NVM** con el siguiente comando
+```bash
+nvm --version
+```
+- Si no tiene instalada la versión recomendada o solicitada, realice el siguiente comando
+
+```bash
+nvm install <versión>
+```
+en este caso debe de eliminar las "<>" y colocar su versión exacta, dado que si coloca el versionado, instalara la ultima actualización de ese versionado.
+
+- Para utilizar dicha versión actualizada es necesario realizar el siguiente comando.
+```bash
+nvm use <Versión>
+```
+para utilziar este versión por defecto, se debe de ocupar la versión 
+
+```bash
+nvm alias default <versión>
+```
+
+y para finalizar, se debe de verificar la versión de node.
+
+```bash
+node -v
+```
+Para actualizar el npm del FrontEnd se debe de realizar el siguiente comando.
+
+```bash
+npm install -g npm
+```
+
 
 ### Actualización periódica de Laravel y sus dependencias mediante
 ```bash
