@@ -18,10 +18,19 @@ class ReportController extends Controller
             'numero' => $i,
         ]);
     }
+    private function makeMessages()
+    {
+        return [
+            'date1.required' => 'La fecha de inicio es obligatoria.',
+            'date1.date' => 'La fecha de inicio debe ser una fecha válida.',
+            'date2.required' => 'La fecha de término es obligatoria.',
+            'date2.date' => 'La fecha de término debe ser una fecha válida.',
+        ];
+    }
 
     public function searchToDate(Request $request)
     {
-        $messages = makeMessages();
+        $messages = $this->makeMessages();
         $this->validate($request, [
             'date1' => ['required','date'],
             'date2' => ['required','date'],

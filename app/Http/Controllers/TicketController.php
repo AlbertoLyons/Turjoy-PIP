@@ -15,7 +15,7 @@ class TicketController extends Controller
     {
         try{
             // Generar el numero de reserva
-            $code = generateReservationNumber();
+            $code = $this->generateReservationNumber();
 
             //Obtener el total base-rate del request
             $baseRateTotal = $request->input('base-rate');
@@ -48,5 +48,11 @@ class TicketController extends Controller
             dd($e);
             return redirect()->back()->with('error', 'Ha ocurrido un error al generar la reserva, intente nuevamente.');
         }
+    }
+    private function generateReservationNumber()
+    {
+        $letters = strtoupper(substr(str_shuffle('ABCDEFGHIJKLMNOPQRSTUVWXYZ'), 0, 4));
+        $numbers = rand(10, 99);
+        return $letters . $numbers;
     }
 }
