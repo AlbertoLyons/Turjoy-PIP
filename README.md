@@ -1,7 +1,4 @@
 # TURJOY
-
-php artisan migrate:fresh --seed
-
 Es un sistema que permite la búsqueda de reservas y la reserva de pasajes en línea de la empresa "Turjoy". Permite al usuario visualizar las rutas de los viajes y reservar pasajes de acuerdo a su fecha y hora, indicando el origen, destino y cantidad de pasajes.
 
 El objetivo de este documento es guiar al usuario en el uso correcto de los requisitos previos e instalación. Además, se busca comprender el funcionamiento del sistema. Para esto, el documento se divide en ciertos puntos
@@ -27,7 +24,19 @@ Este sistema cuenta con una página web en donde existen dos tipos de interacci�
 ## Alcance de la mantención
 El mantenimiento del sistema web desarrollado en Laravel y PHP abarca una serie de tareas preventivas y correctivas diseñadas para garantizar su estabilidad, seguridad y rendimiento. Estas tareas pueden ser realizadas por el equipo técnico o administradores de sistemas, siguiendo las mejores prácticas de desarrollo y operación.
 
-Este manual describe detalladamente las tareas que forman parte del mantenimiento preventivo y correctivo del sistema, estableciendo la responsabilidad del equipo encargado de su ejecución y el impacto esperado de cada acción.
+### Se recomienda:
+
+
+#### Control de Versiones y Respaldo:
+- Todo el equipo de desarrollo debe tener la misma versión de Laravel y PHP para evitar problemas de compatibilidad.
+- Cada integrante del equipo debe contar con un respaldo actualizado del proyecto.
+- Se recomienda utilizar un sistema de control de versiones como Git, asegurando que el código esté siempre sincronizado con el repositorio principal.
+- Implementar branches para desarrollo, pruebas y producción, evitando cambios directos en la rama principal sin revisión previa.
+
+#### Seguridad y Actualizaciones
+- Mantener el framework Laravel, PHP y dependencias siempre actualizados para corregir vulnerabilidades.
+- Configurar permisos adecuados en los archivos y directorios del servidor para evitar accesos no autorizados.
+- Usar variables de entorno (.env) para almacenar credenciales y evitar exponer datos sensibles en el código fuente.
 
 
 ## 2. Requisitos previos
