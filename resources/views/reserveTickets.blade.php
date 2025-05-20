@@ -119,10 +119,6 @@
                 </div>
             </div>
 
-
-
-
-            <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
             <script src="{{ asset('assets/index.js') }}"></script>
         </body>
 

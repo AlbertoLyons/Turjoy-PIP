@@ -178,6 +178,11 @@ button.addEventListener('click', (e) => {
             cancelButtonColor: "#ff8a80",
             confirmButtonText: "Confirmar",
             cancelButtonText: "Volver",
+            customClass: {
+                confirmButton: 'bg-blue-600 text-white hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5',
+                cancelButton: 'bg-red-400 text-white hover:bg-red-500 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 ml-2'
+              },
+              buttonsStyling: false
         }).then((result) => {
             if (result.isConfirmed) {
                 var total = baseRate;
