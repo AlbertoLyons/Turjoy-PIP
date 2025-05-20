@@ -51,7 +51,7 @@ class VoucherController extends Controller {
         $filename = $ticket->code.'.pdf';
 
         // Guardar el PDF en la carpeta public
-        $path = 'pdfs\\'.$filename;
+        $path = 'pdfs/'.$filename;
         Storage::disk('public')->put($path, $domPDF->output());
         try {
             $voucher = Voucher::create([
