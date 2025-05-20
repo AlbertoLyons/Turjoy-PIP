@@ -22,6 +22,6 @@ class DatabaseSeeder extends Seeder
         $this->call(usuarioTableSeeder::class);
         $this->call(TravelSeeder::class);
         $this->call(TicketSeeder::class);
-        $this->call(VoucherSeeder::class);
+        //$this->call(VoucherSeeder::class);
     }
 }

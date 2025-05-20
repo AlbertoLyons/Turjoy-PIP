@@ -5,16 +5,7 @@
 @endsection
 
 @section('content')
-<style>
-.vertical-center {
-  margin: 0;
-  position: absolute;
-  top: 43%;
-  left: 40%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-</style>
+
     {{-- Detalle de la compra --}}
     <div class="flex flex-col items-center vertical-center">
         <div class="w-1/3 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
